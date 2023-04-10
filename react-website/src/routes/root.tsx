@@ -1,7 +1,10 @@
+import { Outlet } from "react-router-dom";
+import NavBar from "../components/NavBar/NavBar";
 export default function Root() {
   return (
     <>
-      <div className="title"><h1>Welcome</h1></div>
+      <NavBar title={"Welcome👋"} />
+      <Outlet />
     </>
   );
 }

@@ -1,11 +1,24 @@
-import React from 'react'; // we need this to make JSX compile
+import React, { FC } from "react"; // we need this to make JSX compile
+import styled from "@emotion/styled";
 
-type NavBar = {
-  title: string
-}
+type NavBarTypes = {
+  title: string;
+};
 
-const Card = ({ title}: NavBar) => (<>
-  <h2>{ title }</h2>
-</>)
+const StyledNavBar = styled.div`
+  width: 100vw;
+  background-color: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+`;
 
-export default Card;
+const NavBar: FC<NavBarTypes> = ({ title }) => (
+  <>
+    <StyledNavBar>
+      <h2>{title}</h2>
+    </StyledNavBar>
+  </>
+);
+
+export default NavBar;

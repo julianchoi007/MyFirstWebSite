@@ -1,23 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import NavBar from "./components/NavBar/NavBar"
-import Root from './routes/root'; 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Root from "./routes/root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Contact from "./routes/contact";
+import Home from "./routes/home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <Root />,
+    children: [
+      { path: "/", element: <Home /> },
+      {
+        path: "contacts",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 
 function App() {
   return (
     <div className="App">
-      <NavBar title={"test"}/>
       <RouterProvider router={router} />
     </div>
   );
