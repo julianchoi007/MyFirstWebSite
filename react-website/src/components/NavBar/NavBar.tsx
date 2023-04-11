@@ -11,6 +11,10 @@ const StyledNavBar = styled.div`
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 const NavBar: FC<NavBarTypes> = ({ title }) => (
