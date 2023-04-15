@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Root from "./routes/root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       {
-        path: "contacts",
+        path: "/home",
         element: <Contact />,
       },
     ],
